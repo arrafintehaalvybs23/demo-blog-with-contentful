@@ -8,6 +8,7 @@ import CoverImage from "../../cover-image";
 
 import { Markdown } from "@/lib/markdown";
 import { getAllPosts, getPostAndMorePosts } from "@/lib/api";
+import { Header } from "@/app/components/Header";
 
 export async function generateStaticParams() {
   const allPosts = await getAllPosts(false);
@@ -27,12 +28,13 @@ export default async function PostPage({
 
   return (
     <div className="container mx-auto px-5">
-      <h2 className="mb-20 mt-8 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter">
+      {/* <h2 className="mb-20 mt-8 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter">
         <Link href="/" className="hover:underline">
           Blog
         </Link>
         .
-      </h2>
+      </h2> */}
+      <Header />
       <article>
         <h1 className="mb-12 text-center text-6xl font-bold leading-tight tracking-tighter md:text-left md:text-7xl md:leading-none lg:text-8xl">
           {post.title}

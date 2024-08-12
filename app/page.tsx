@@ -8,6 +8,7 @@ import MoreStories from "./more-stories";
 
 import { getAllPosts } from "@/lib/api";
 import { CMS_NAME, CMS_URL } from "@/lib/constants";
+import { Header } from "./components/Header";
 
 function Intro() {
   return (
@@ -84,7 +85,8 @@ export default async function Page() {
 
   return (
     <div className="container mx-auto px-5">
-      <Intro />
+      <Header />
+      {/* <Intro /> */}
       {heroPost && (
         <HeroPost
           title={heroPost.title}
