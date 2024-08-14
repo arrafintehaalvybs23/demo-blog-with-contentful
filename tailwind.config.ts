@@ -1,7 +1,8 @@
 import type { Config } from "tailwindcss";
 import typography from "@tailwindcss/typography";
+const withMT = require("@material-tailwind/react/utils/withMT");
 
-export default {
+export default withMT({
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -18,4 +19,4 @@ export default {
     hoverOnlyWhenSupported: true,
   },
   plugins: [typography],
-} satisfies Config;
+}) satisfies Config;

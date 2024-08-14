@@ -9,6 +9,8 @@ import MoreStories from "./more-stories";
 import { getAllPosts } from "@/lib/api";
 import { CMS_NAME, CMS_URL } from "@/lib/constants";
 import { Header } from "./components/Header";
+import { CarouselWrapper } from "./components/carousel/CarouselWrapper";
+import BlogList from "./components/home/BlogList";
 
 function Intro() {
   return (
@@ -86,8 +88,9 @@ export default async function Page() {
   return (
     <div className="container mx-auto px-5">
       <Header />
+      <CarouselWrapper />
       {/* <Intro /> */}
-      {heroPost && (
+      {/* {heroPost && (
         <HeroPost
           title={heroPost.title}
           coverImage={heroPost.coverImage}
@@ -96,8 +99,9 @@ export default async function Page() {
           slug={heroPost.slug}
           excerpt={heroPost.excerpt}
         />
-      )}
-      <MoreStories morePosts={morePosts} />
+      )} */}
+      <BlogList />
+      {/* <MoreStories morePosts={morePosts} /> */}
     </div>
   );
 }
