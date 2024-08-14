@@ -40,11 +40,7 @@ export function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-6 px-7">
       <div className="container mx-auto px-5">
-        <div
-          className="grid gap-6"
-          style={{ gridTemplateColumns: `repeat(${columnCount}, 1fr)` }}
-        >
-          {" "}
+        <div className={`grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4`}>
           {footerData.map((footer, index) => (
             <div key={index} className="space-y-4">
               <h2 className="text-xl font-bold mb-4">{footer.fields.title}</h2>
