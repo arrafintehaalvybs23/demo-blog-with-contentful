@@ -35,7 +35,7 @@ const BLOG_POST_GRAPHQL_FIELDS = `
     url
   }
   publishedDate
-  authorName {
+  author {
     name
     picture {
       url
@@ -122,6 +122,7 @@ export async function getAllBlogPosts(isDraftMode: boolean): Promise<any[]> {
     isDraftMode,
     ["blogPost"]
   );
+  console.log("🚀 ~ getAllBlogPosts ~ entries:", entries)
   return extractBlogPostsEntries(entries);
 }
 

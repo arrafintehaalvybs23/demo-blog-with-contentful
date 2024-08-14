@@ -6,7 +6,7 @@ import BlogItem from "./BlogItem";
 export default async function BlogList({}) {
   const { isEnabled } = draftMode();
   const allPosts = await getAllBlogPosts(isEnabled);
-  // console.log("🚀 ~ BlogList ~ allPosts:", allPosts);
+  console.log("🚀 ~ BlogList ~ allPosts:", allPosts);
   return (
     <section>
       {React.Children.toArray(
