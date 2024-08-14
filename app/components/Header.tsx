@@ -13,7 +13,7 @@ console.log("Access Token:", process.env.CONTENTFUL_ACCESS_TOKEN);
 //   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 // });
 
-const client = createClient({
+export const client = createClient({
   space: "b5o1vh7kxenn",
   accessToken: "6muMAQT7MxHtCFMEj802LYKO2rV7OGvZYuXwPmwgAkI",
 });
